@@ -24,7 +24,7 @@ const SloganMarquee = () => {
   }, []);
 
   return (
-    <span className="overflow-hidden whitespace-nowrap w-2/3">
+    <span className="overflow-hidden whitespace-nowrap w-2/3 h-full flex items-center justify-center">
       <span
         key={index}
         className={`inline-block ${style["animate-marquee"]} text-xs lg:text-sm font-normal`}
