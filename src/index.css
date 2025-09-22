@@ -1,0 +1,65 @@
+@import "tailwindcss";
+@import "swiper/css";
+
+body {
+  font-family: "Inter", sans-serif;
+  color: white;
+}
+
+:root {
+  --app-height: 100vh; /* fallback */
+  user-select: none;
+  overflow: hidden;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-slate-600) transparent;
+  outline: none;
+  transition: color 0.25s, background-color 0.25s, border-color 0.25s,
+    opacity 0.25s, outline-color 0.25s;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none !important; /* Ẩn trên Chrome, Safari */
+}
+.hide-scrollbar {
+  -ms-overflow-style: none !important; /* Ẩn trên IE và Edge */
+  scrollbar-width: none !important; /* Ẩn trên Firefox */
+}
+
+button {
+  cursor: pointer;
+}
+
+.i,
+.UP,
+.green,
+.g {
+  color: rgba(11, 223, 57, 1) !important;
+}
+
+.DOWN,
+.d,
+.red {
+  color: rgba(255, 13, 13, 1) !important;
+}
+
+.e,
+.EQUAL,
+.r,
+.REF,
+.yellow {
+  color: rgba(253, 255, 18, 1) !important;
+}
+
+.FLOOR,
+.f {
+  color: rgb(0, 155, 222) !important;
+}
+
+.CEIL,
+.c,
+.violet {
+  color: rgba(253, 2, 253, 1) !important;
+}
