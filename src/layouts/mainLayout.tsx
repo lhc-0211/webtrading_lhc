@@ -3,7 +3,7 @@ import { Outlet } from "react-router-dom";
 
 const MainLayout: React.FC = () => {
   return (
-    <div className="flex h-full max-h-[calc(var(--app-height)-70px)] overflow-y-auto bg-black hide-scrollbar">
+    <div className="flex h-full max-h-[calc(var(--app-height)-70px)] overflow-hidden bg-black">
       {/* Sidebar bên trái */}
       {/* <Sidebar /> */}
       {/* Nội dung chính */}
