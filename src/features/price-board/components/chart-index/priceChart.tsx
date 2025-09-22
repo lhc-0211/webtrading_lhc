@@ -266,6 +266,21 @@ function PriceChart({ data }: { data: DataIndexChart[] }): JSX.Element {
     setOption(newOption);
   }
 
+  //ResizeObserver để fix Swiper + resize layout
+  useEffect(() => {
+    const chart = chartRef.current?.getEchartsInstance();
+    if (!chart) return;
+
+    const observer = new ResizeObserver(() => {
+      chart.resize();
+    });
+
+    const dom = chartRef.current?.ele;
+    if (dom) observer.observe(dom);
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <ReactECharts
       ref={chartRef}
