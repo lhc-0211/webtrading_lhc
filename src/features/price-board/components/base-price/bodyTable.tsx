@@ -214,7 +214,9 @@ const BodyTableBase = () => {
   }, []);
 
   return (
-    <div className="min-h-[337px]" style={{ height: `${remainingHeight}px` }}>
+    <div
+      style={{ height: `${remainingHeight < 300 ? 300 : remainingHeight}px` }}
+    >
       <List
         className="hide-scrollbar"
         rowHeight={28}
