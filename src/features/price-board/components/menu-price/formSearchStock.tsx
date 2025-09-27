@@ -24,7 +24,7 @@ const FormSearchStock = () => {
 
   const filterColors = (inputValue: string) => {
     return stockOptions.filter((i) =>
-      i.label.toLowerCase().includes(inputValue.toLowerCase())
+      i.value.toLowerCase().includes(inputValue.toLowerCase())
     );
   };
 
