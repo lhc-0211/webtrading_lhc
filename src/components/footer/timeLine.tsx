@@ -36,7 +36,7 @@ const TimeLine = () => {
   const isLoading = !time || !date;
 
   return (
-    <div className="hidden sm:flex sm:flex-row md:gap-1 sm:items-center sm:justify-between text-gray-500">
+    <div className="hidden sm:flex sm:flex-row md:gap-1 sm:items-center sm:justify-between text-gray-400">
       {isLoading ? (
         <TimeSkeleton />
       ) : (

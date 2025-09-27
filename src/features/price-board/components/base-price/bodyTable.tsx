@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import { HiOutlineBookmark } from "react-icons/hi";
 import { List, type RowComponentProps } from "react-window";
 import type { StockSnapshot } from "../../../../types";
@@ -21,6 +20,7 @@ function RowComponent({
     <div
       className={`group flex w-full h-7 text-[10px] md:text-xs font-normal text-gray-300 border-b border-x border-gray-600 hover:!bg-gray-800`}
       style={style}
+      key={dataIndex.symbol}
     >
       {/* Ghim + CK + Trần + Sàn + TC */}
       <div className={`w-[2%] flex items-center justify-center`}>
@@ -197,21 +197,12 @@ function RowComponent({
   );
 }
 
-const BodyTableBase = () => {
-  const [remainingHeight, setRemainingHeight] = useState<number>(
-    window.innerHeight - 38 - 4 - 160 - 32 - 32 - 8 - 60
-  );
+interface Props {
+  remainingHeight: number | string | undefined;
+}
 
-  const setAppHeight = () => {
-    const newHeight = window.innerHeight - 38 - 4 - 160 - 32 - 32 - 8 - 60;
-    setRemainingHeight(newHeight);
-  };
-
-  useEffect(() => {
-    window.addEventListener("resize", setAppHeight);
-
-    return () => window.removeEventListener("resize", setAppHeight);
-  }, []);
+const BodyTableBase = (props: Props) => {
+  const { remainingHeight } = props;
 
   return (
     <div style={{ height: `${remainingHeight}px` }}>

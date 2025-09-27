@@ -19,6 +19,7 @@ function RowComponent({
         index % 2 === 1 ? "bg-gray-800" : ""
       }`}
       style={style}
+      key={dataIndex.indexId}
     >
       <div className="basis-[20%] text-[10px] lg:text-xs text-gray-300 font-normal text-left uppercase overflow-hidden pl-1">
         {dataIndex.indexId}

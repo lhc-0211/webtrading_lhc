@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <footer className="h-auto min-h-8 px-1 lg:px-4 bg-gray-900 flex flex-row gap-2 md:gap-4 items-center justify-between w-full border-t border-gray-700">
       {/* Giờ */}
-      <div className="flex items-center gap-1 md:gap-2 text-gray-300 text-[10px] md:text-xs">
+      <div className="flex items-center gap-1 md:gap-2 text-gray-400 text-[10px] md:text-xs">
         <TimeLine />
         <span className="flex items-center justify-center gap-[2px]">
           © 2025
