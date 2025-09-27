@@ -38,7 +38,7 @@ const HeaderTableBase = () => {
           Khớp lệnh
         </div>
         <div className="grid grid-cols-4 divide-x divide-gray-600 h-1/2">
-          {["Giá", "KL", "+/-", "+/%"].map((t) => (
+          {["Giá", "KL", "+/-", "% +/-"].map((t) => (
             <div key={t} className="flex items-center justify-center">
               {t}
             </div>

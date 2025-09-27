@@ -1,7 +1,12 @@
 import { HiOutlineBookmark } from "react-icons/hi";
 import { List, type RowComponentProps } from "react-window";
 import type { StockSnapshot } from "../../../../types";
-import { colorFix, formatVolPrice, numberFormat } from "../../../../utils";
+import {
+  colorFix,
+  formatVolPrice,
+  numberFormat,
+  StringToDouble,
+} from "../../../../utils";
 import { dataSnapShot } from "./cfg";
 
 function RowComponent({
@@ -118,7 +123,7 @@ function RowComponent({
             dataIndex.ref
           )}`}
         >
-          {dataIndex.change}
+          {numberFormat(dataIndex.change, 2, "-")}
         </div>
         <div
           className={`flex items-center justify-center ${colorFix(
@@ -129,7 +134,8 @@ function RowComponent({
             dataIndex.ref
           )}`}
         >
-          {dataIndex.changePc}
+          {numberFormat(dataIndex.changePc, 2, "-")}
+          {StringToDouble(dataIndex.changePc) !== 0 ? "%" : ""}
         </div>
       </div>
 
